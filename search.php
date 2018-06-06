@@ -22,7 +22,7 @@ if (!$button)
     echo "NO INPUT!";
 else {
     if (strlen($a) <= 1) {
-        header( "Location: https://searchthenexus.ddns.net" );
+        header("Location: https://searchthenexus.ddns.net");
 	} else {
                 
         // GET THE DESCRIPTION
@@ -193,6 +193,17 @@ else {
                 <div style="position: absolute; margin-top:0%; margin-left:3%">
                     <h3 style="color: white;"><?php echo $resultsFoundMessage; ?></h3>
                 </div>
+
+                <div style="position: absolute; margin-top:-0.4%; margin-left:15%">
+                    <form action='search.php' method='GET'>
+                        <input type='text' size='60' name='search' autocomplete='off' placeholder='The world is at your fingertips...'></br></br>
+                        <center>
+                            <button style="position: absolute; margin-top:-12%; margin-left:26%; height: 55%;" type='submit' name='submit' value='SEARCH' class='main-btn noselect'>
+                                SEARCH
+                            </button>
+                        </center>
+                    </form>
+                </div>
                 
                 <div style="margin-top:0%; padding: 2.5%">
                     <div style="float:left; width:75%; height: 80% ; overflow:scroll;">
@@ -252,7 +263,7 @@ else {
                                     <p><?php echo $desc;?></p>
                                 </div><?php
                             }
-                        }?>   
+                        } ?>   
                     </div>
                 </div>
             </body>
